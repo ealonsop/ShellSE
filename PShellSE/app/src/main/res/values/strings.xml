@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PShellSE</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_pregunta">PreguntaActivity</string>
+    <string name="inicio">SHELL para Sistemas Expertos</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="title_activity_muestra_info">MuestraInfoActivity</string>
+    <string name="title_activity_shell">ShellActivity</string>
+    <string name="edu">México-1995 (C++)\nPerú-2011-2015 (Java)\nE.Alonso</string>
+    <string name="edu2">ealonsop@hotmail.com\ncix.labs@gmail.com</string>
+    <string name="cargar">Cargar KDB (.xls)</string>
+    <string name="salir">Salir</string>
+</resources>
