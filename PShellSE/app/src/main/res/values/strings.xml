@@ -9,5 +9,6 @@
     <string name="edu">México-1995 (C++)\nPerú-2011-2015 (Java)\nE.Alonso</string>
     <string name="edu2">ealonsop@hotmail.com\ncix.labs@gmail.com</string>
     <string name="cargar">Cargar KDB (.xls)</string>
+    <string name="cargardemo">Cargar Demo KDB</string>
     <string name="salir">Salir</string>
 </resources>

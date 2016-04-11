@@ -23,7 +23,6 @@ import jxl.read.biff.BiffException;
 
 public class Analizador {
     
-    File inputWorkbook;
     Workbook w;
     Sheet sheet;
     int sh_row, sh_col;
@@ -74,61 +73,6 @@ public class Analizador {
     {
     }
 
-    //NO
-    int Cargar( Shell s, URL archivo ) throws IOException
-    {
-        sh = s;
-
-        nl = 1;
-        err = 0;
-        linea = "";
-        ultter = null;
-        ultexp = null;
-        ultant = null;
-        ultcons = null;
-
-        try {
-            inputWorkbook = new File(archivo.toString());
-            w = Workbook.getWorkbook(inputWorkbook);
-
-            int k = bc();
-          //fh.close();
-            return k == 0 ? 1 : 0;
-        }
-        catch (BiffException e) {
-           Error(3);
-        }             
-        return 0;
-    }
-
-    //NO
-    int Cargar( Shell s, String archivo ) throws IOException
-    {
-        sh = s;
-        
-        nl = 1;
-        err = 0;
-        linea = " ";
-        ultter = null;
-        ultexp = null;
-        ultant = null;
-        ultcons = null;
-
-        try {
-            inputWorkbook = new File(archivo);
-            w = Workbook.getWorkbook(inputWorkbook);
-            int k = bc();
-            return k == 0 ? 1 : 0;
-        }
-        catch (BiffException e) {
-           Error(3);
-        }
-        catch (IOException e) {
-            Error(20);
-        }
-        return 0;
-    }
-
     //este es el que se está usando
     int Cargar( Shell s, File archivo ) throws IOException
     {
@@ -145,8 +89,36 @@ public class Analizador {
         try {
             WorkbookSettings ws = new WorkbookSettings();
             ws.setEncoding("Cp1252");
-            inputWorkbook = archivo;
-            w = Workbook.getWorkbook(inputWorkbook,ws);
+            w = Workbook.getWorkbook(archivo,ws);
+            int k = bc();
+            return k == 0 ? 1 : 0;
+        }
+        catch (BiffException e) {
+            Error(3);
+        }
+        catch (IOException e) {
+            Error(20);
+        }
+        return 0;
+    }
+
+    //este es el que se está usando
+    int Cargar( Shell s, InputStream archivo ) throws IOException
+    {
+        sh = s;
+
+        nl = 1;
+        err = 0;
+        linea = " ";
+        ultter = null;
+        ultexp = null;
+        ultant = null;
+        ultcons = null;
+
+        try {
+            WorkbookSettings ws = new WorkbookSettings();
+            ws.setEncoding("Cp1252");
+            w = Workbook.getWorkbook(archivo,ws);
             int k = bc();
             return k == 0 ? 1 : 0;
         }

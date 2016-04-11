@@ -1,5 +1,13 @@
 [
     {
+        "merged": "C:\\Users\\andrewandree\\AndroidStudioProjects\\PShellSE\\aFileDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\daidalos_file_item.xml",
+        "source": "C:\\Users\\andrewandree\\AndroidStudioProjects\\PShellSE\\aFileDialog\\build\\intermediates\\bundles\\debug\\res\\layout\\daidalos_file_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\andrewandree\\AndroidStudioProjects\\PShellSE\\aFileDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\daidalos_file_chooser.xml",
+        "source": "C:\\Users\\andrewandree\\AndroidStudioProjects\\PShellSE\\aFileDialog\\build\\intermediates\\bundles\\debug\\res\\layout\\daidalos_file_chooser.xml"
+    },
+    {
         "merged": "C:\\Users\\ealonso\\AndroidStudioProjects\\PShellSE\\aFileDialog\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\daidalos_file_item.xml",
         "source": "C:\\Users\\ealonso\\AndroidStudioProjects\\PShellSE\\aFileDialog\\build\\intermediates\\bundles\\debug\\res\\layout\\daidalos_file_item.xml"
     },

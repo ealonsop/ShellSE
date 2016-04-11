@@ -17,6 +17,7 @@ import com.cixlabs.pshellse.ShellActivity;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 
 public class Shell {
@@ -243,34 +244,7 @@ public class Shell {
         }
   }
 
-  public int Ejecutar( String basec )
-  {
-        if ( Cargar( basec ) == 0 )
-            return 0;
 
-        return Ejecutar();
-
-  }
-
-  public  int Cargar( URL bc )
-  {
-      String archivo = bc.toString();
-      return Cargar(archivo);
-  }
-
-  public  int Cargar( String bc )
-  {
-      Analizador A;
-
-      archivo = bc.toUpperCase();
-      A = new Analizador();
-      try {
-        return A.Cargar(this, archivo);
-      }
-      catch ( IOException e) {
-        return 0;
-      }
-  }
 
     //este es el q se usa
     public  int Cargar( File bc )
@@ -286,13 +260,19 @@ public class Shell {
         }
     }
 
-  public int Ejecutar( URL basec )
-  {
-        if ( Cargar( basec ) == 0 )
-            return 0;
+    //este es el q se usa
+    public  int Cargar( InputStream bc )
+    {
+        Analizador A;
 
-        return Ejecutar();
-  }
+        A = new Analizador();
+        try {
+            return A.Cargar(this, bc);
+        }
+        catch ( IOException e) {
+            return 0;
+        }
+    }
 
   public int	menu() {
       return shmenu.Menu();
